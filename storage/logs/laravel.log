@@ -1,0 +1,509 @@
+[2023-09-21 08:18:29] local.ERROR: Attempt to read property "POST /api/produit/storeProduit HTTP/1.1
+Accept:         */*
+Content-Length: 124
+Content-Type:   application/json
+Host:           127.0.0.1:8081
+User-Agent:     insomnia/2023.5.8
+
+{ 
+	"designation":"Telephone",
+	"prix":"10200",
+	"qte":"12",
+	"lienImage": "439.jpg",
+	"status":true,
+	"categorie_id":"3"
+}
+" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"POST /api/produit/storeProduit HTTP/1.1
+
+Accept:         */*
+
+Content-Length: 124
+
+Content-Type:   application/json
+
+Host:           127.0.0.1:8081
+
+User-Agent:     insomnia/2023.5.8
+
+
+
+{ 
+\t\"designation\":\"Telephone\",
+\t\"prix\":\"10200\",
+\t\"qte\":\"12\",
+\t\"lienImage\": \"439.jpg\",
+\t\"status\":true,
+\t\"categorie_id\":\"3\"
+}
+\" on null at C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php:42)
+[stacktrace]
+#0 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#1 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php(42): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#2 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ProduitController->store(Object(App\\Http\\Requests\\StoreProduitRequest))
+#3 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('store', Array)
+#4 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProduitController), 'store')
+#5 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#7 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\HP\\\\Mus...')
+#40 {main}
+"} 
+[2023-09-21 09:03:56] local.ERROR: Attempt to read property "POST /api/produit/storeProduit HTTP/1.1
+Accept:         */*
+Content-Length: 124
+Content-Type:   application/json
+Host:           127.0.0.1:8081
+User-Agent:     insomnia/2023.5.8
+
+{ 
+	"designation":"Telephone",
+	"prix":"10200",
+	"qte":"12",
+	"lienImage": "439.jpg",
+	"status":true,
+	"categorie_id":"3"
+}
+" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"POST /api/produit/storeProduit HTTP/1.1
+
+Accept:         */*
+
+Content-Length: 124
+
+Content-Type:   application/json
+
+Host:           127.0.0.1:8081
+
+User-Agent:     insomnia/2023.5.8
+
+
+
+{ 
+\t\"designation\":\"Telephone\",
+\t\"prix\":\"10200\",
+\t\"qte\":\"12\",
+\t\"lienImage\": \"439.jpg\",
+\t\"status\":true,
+\t\"categorie_id\":\"3\"
+}
+\" on null at C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php:42)
+[stacktrace]
+#0 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#1 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php(42): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#2 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ProduitController->store(Object(App\\Http\\Requests\\StoreProduitRequest))
+#3 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('store', Array)
+#4 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProduitController), 'store')
+#5 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#7 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\HP\\\\Mus...')
+#40 {main}
+"} 
+[2023-09-21 09:04:52] local.ERROR: Attempt to read property "POST /api/produit/storeProduit HTTP/1.1
+Accept:         */*
+Content-Length: 124
+Content-Type:   application/json
+Host:           127.0.0.1:8081
+User-Agent:     insomnia/2023.5.8
+
+{ 
+	"designation":"Telephone",
+	"prix":"10200",
+	"qte":"12",
+	"lienImage": "439.jpg",
+	"status":true,
+	"categorie_id":"3"
+}
+" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"POST /api/produit/storeProduit HTTP/1.1
+
+Accept:         */*
+
+Content-Length: 124
+
+Content-Type:   application/json
+
+Host:           127.0.0.1:8081
+
+User-Agent:     insomnia/2023.5.8
+
+
+
+{ 
+\t\"designation\":\"Telephone\",
+\t\"prix\":\"10200\",
+\t\"qte\":\"12\",
+\t\"lienImage\": \"439.jpg\",
+\t\"status\":true,
+\t\"categorie_id\":\"3\"
+}
+\" on null at C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php:42)
+[stacktrace]
+#0 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#1 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php(42): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#2 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ProduitController->store(Object(App\\Http\\Requests\\StoreProduitRequest))
+#3 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('store', Array)
+#4 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProduitController), 'store')
+#5 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#7 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\HP\\\\Mus...')
+#40 {main}
+"} 
+[2023-09-21 09:06:50] local.ERROR: Attempt to read property "POST /api/produit/storeProduit HTTP/1.1
+Accept:         */*
+Content-Length: 124
+Content-Type:   application/json
+Host:           127.0.0.1:8081
+User-Agent:     insomnia/2023.5.8
+
+{ 
+	"designation":"Telephone",
+	"prix":"10200",
+	"qte":"12",
+	"lienImage": "439.jpg",
+	"status":true,
+	"categorie_id":"3"
+}
+" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"POST /api/produit/storeProduit HTTP/1.1
+
+Accept:         */*
+
+Content-Length: 124
+
+Content-Type:   application/json
+
+Host:           127.0.0.1:8081
+
+User-Agent:     insomnia/2023.5.8
+
+
+
+{ 
+\t\"designation\":\"Telephone\",
+\t\"prix\":\"10200\",
+\t\"qte\":\"12\",
+\t\"lienImage\": \"439.jpg\",
+\t\"status\":true,
+\t\"categorie_id\":\"3\"
+}
+\" on null at C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php:42)
+[stacktrace]
+#0 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#1 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php(42): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#2 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ProduitController->store(Object(App\\Http\\Requests\\StoreProduitRequest))
+#3 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('store', Array)
+#4 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProduitController), 'store')
+#5 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#7 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\HP\\\\Mus...')
+#40 {main}
+"} 
+[2023-09-21 09:08:17] local.ERROR: Attempt to read property "POST /api/produit/storeProduit HTTP/1.1
+Accept:         */*
+Content-Length: 124
+Content-Type:   application/json
+Host:           127.0.0.1:8081
+User-Agent:     insomnia/2023.5.8
+
+{ 
+	"designation":"Telephone",
+	"prix":"10200",
+	"qte":"12",
+	"lienImage": "439.jpg",
+	"status":true,
+	"categorie_id":"3"
+}
+" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"POST /api/produit/storeProduit HTTP/1.1
+
+Accept:         */*
+
+Content-Length: 124
+
+Content-Type:   application/json
+
+Host:           127.0.0.1:8081
+
+User-Agent:     insomnia/2023.5.8
+
+
+
+{ 
+\t\"designation\":\"Telephone\",
+\t\"prix\":\"10200\",
+\t\"qte\":\"12\",
+\t\"lienImage\": \"439.jpg\",
+\t\"status\":true,
+\t\"categorie_id\":\"3\"
+}
+\" on null at C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php:42)
+[stacktrace]
+#0 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#1 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php(42): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'C:\\\\Users\\\\HP\\\\Mus...', 42)
+#2 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ProduitController->store(Object(App\\Http\\Requests\\StoreProduitRequest))
+#3 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('store', Array)
+#4 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProduitController), 'store')
+#5 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#6 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#7 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#8 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#16 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#18 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#19 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\HP\\\\Mus...')
+#40 {main}
+"} 
+[2023-09-21 09:10:40] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'designation' cannot be null (Connection: mysql, SQL: update `produits` set `designation` = ?, `prix` = ?, `qte` = ?, `status` = ?, `categorie_id` = ?, `produits`.`updated_at` = 2023-09-21 09:10:40 where `id` = 4) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'designation' cannot be null (Connection: mysql, SQL: update `produits` set `designation` = ?, `prix` = ?, `qte` = ?, `status` = ?, `categorie_id` = ?, `produits`.`updated_at` = 2023-09-21 09:10:40 where `id` = 4) at C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:801)
+[stacktrace]
+#0 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('update `produit...', Array, Object(Closure))
+#1 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(593): Illuminate\\Database\\Connection->run('update `produit...', Array, Object(Closure))
+#2 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(545): Illuminate\\Database\\Connection->affectingStatement('update `produit...', Array)
+#3 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3421): Illuminate\\Database\\Connection->update('update `produit...', Array)
+#4 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1059): Illuminate\\Database\\Query\\Builder->update(Array)
+#5 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1213): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#6 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1130): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#7 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(990): Illuminate\\Database\\Eloquent\\Model->save(Array)
+#8 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php(105): Illuminate\\Database\\Eloquent\\Model->update()
+#9 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ProduitController->update(Object(App\\Http\\Requests\\UpdateProduitRequest), Object(App\\Models\\Produit))
+#10 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('update', Array)
+#11 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProduitController), 'update')
+#12 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#13 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#14 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#19 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#20 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#21 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#23 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#25 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\HP\\\\Mus...')
+#47 {main}
+
+[previous exception] [object] (PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'designation' cannot be null at C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:605)
+[stacktrace]
+#0 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(605): PDOStatement->execute()
+#1 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(788): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('update `produit...', Array)
+#2 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback('update `produit...', Array, Object(Closure))
+#3 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(593): Illuminate\\Database\\Connection->run('update `produit...', Array, Object(Closure))
+#4 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(545): Illuminate\\Database\\Connection->affectingStatement('update `produit...', Array)
+#5 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3421): Illuminate\\Database\\Connection->update('update `produit...', Array)
+#6 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1059): Illuminate\\Database\\Query\\Builder->update(Array)
+#7 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1213): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#8 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1130): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(990): Illuminate\\Database\\Eloquent\\Model->save(Array)
+#10 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\app\\Http\\Controllers\\ProduitController.php(105): Illuminate\\Database\\Eloquent\\Model->update()
+#11 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ProduitController->update(Object(App\\Http\\Requests\\UpdateProduitRequest), Object(App\\Models\\Produit))
+#12 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('update', Array)
+#13 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ProduitController), 'update')
+#14 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#15 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
+#16 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#21 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#22 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#23 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#48 C:\\Users\\HP\\Music\\APIMOBILE\\apiWebMobile\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\HP\\\\Mus...')
+#49 {main}
+"} 

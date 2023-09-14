@@ -1,0 +1,97 @@
+READ ME
+NB: VOUS DEVREZ VOUS AUTHENTIFIER POUR POUVOIR EFFECTUER CES OPERATIONS 
+==============CATEGORIE================================================================
+    Route pour afficher la liste des catégories
+    api/categorie/listeCategorie
+
+    Route pour ajouter une catégorie sous le format json
+     api/categorie/storeCategorie
+
+
+     comment ajouter :
+        {
+	        "libelleCategorie":"Cigararrete2"
+
+        }
+    Route pour modifier une catégorie sous le format json
+    Remplacez {categorie} par la clé primaire de la catégorie à modifier
+    api/categorie/updateCategorie/{categorie}
+
+    {
+	"libelleCategorie":"ma categorie 11"
+    }
+
+    Route pour supprimer une catégorie
+
+    api/categorie/deleteCategorie/{categorie}
+    Remplacez {categorie} par la clé primaire de la catégorie à supprimer
+
+    =====================END CATEGORIE =================================
+
+
+    =====================ROUTE POUR PRODUITS ===========================
+    Route afficher la liste des produits
+
+    api/produit/listeProduit
+
+    Route pour ajouter un produit sous format json
+
+    api/produit/storeProduit
+        Comment le faire :
+            {
+                "designation":"Telephone",
+                "prix":"10200",
+                "qte":"12",
+                "lienImage": "439.jpg",
+                "status":true,
+                "categorie_id":"3"
+            }
+
+    Route pour Modifier un produit sous format json
+    Remplacez {produit} par la clé primaire du produit à modifier
+
+    api/produit/updateProduit/{produit}
+        Comment le faire
+        {
+            "designation":"Telephone Emma",
+            "prix":"10200",
+            "qte":"12",
+            "lienImage": "439.jpg",
+            "status":true,
+            "categorie_id":"3"
+        }
+
+    Route pour supprimer le produit à travers son identifiant
+
+    api/produit/deleteProduit/{produit}
+
+    Remplacez {produit} par la clé primaire du produit à supprimer
+
+    ===============================END ==================================
+
+    ===================LA LISTE DES ROUTES NOMMEES ======================
+    CATEGORIES ==========
+         Route::prefix('/categorie')->controller(CategorieController::class)->group(function()
+        {
+            Route::get('/listeCategorie','listCategorie')->name('listCategorie');
+            Route::get('/addCategorie','addCategorie')->name('addCategorie');
+            Route::post('/storeCategorie','store')->name('storeCategorie');
+            Route::get('/editCategorie/{categorie}','edit')->name('editCategorie');
+            Route::put('/updateCategorie/{categorie}','update')->name('updateCategorie');
+            Route::delete('/deleteCategorie/{categorie}','destroy')->name('destroyCategorie');
+
+        });
+    END CATEGORIE=========
+
+    PRODUITS ============
+        Route::prefix('/produit')->controller(ProduitController::class)->group(function()
+            {
+            Route::get('/listeProduit','listProduit')->name('listProduit');
+            Route::get('/addProduit','addProduit')->name('addProduit');
+            Route::post('/storeProduit','store')->name('storeProduit');
+            Route::get('/editProduit/{produit}','edit')->name('editProduit');
+            Route::put('/updateProduit/{produit}','update')->name('updateProduit');
+            Route::delete('/deleteProduit/{produit}','destroy')->name('destroyProduit');
+            }
+        );
+    END PRODUITS==========
