@@ -5,22 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\Categorie;
 use App\Http\Requests\StoreCategorieRequest;
 use App\Http\Requests\UpdateCategorieRequest;
+use Illuminate\Http\Request;
 
 class CategorieController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['listCategorie']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth:api', ['except' => ['listCategorie']]);
+    // }
 
     public function listCategorie()
     {
         //
-        $categorie=Categorie::all();
-        return response()->json($categorie);
+        if (Categorie::count()===0) return response()->json(["response"=>"La liste est vide"]); 
+        $categorie=Categorie::orderBy('id','desc')->get();
+        return response()->json(["response"=>$categorie]);
 
     }
 
@@ -37,17 +39,18 @@ class CategorieController extends Controller
      */
     public function store(StoreCategorieRequest $request)
     {
+        if (!(auth()->check())) return response()->json(["message"=>"Veuillez vous identifier pour cette action !"]);
+
         $request->validated();
         $oldCategorie = Categorie::where('libelleCategorie', $request->libelleCategorie)->first();
         if($oldCategorie){
-            return response()->json(['Cette catégorie existe déjà'],403);
+            return response()->json(["message"=>"Cette catégorie existe déjà"],403);
             // Mon code d'erreur 403 signifie qu'il y'a risque de doublon
         }
         $categorie= new Categorie();
         $categorie->libelleCategorie= $request->libelleCategorie ;
         $categorie->save();
-        return response()->json(['Ajout effectué avec succès'],403);
-
+        return response()->json(["message"=>'Ajout effectué avec succès']);
     }
 
     /**
@@ -69,30 +72,31 @@ class CategorieController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategorieRequest $request, Categorie $categorie)
+    public function update(Request $request)
     {
         //
+        if (!(auth()->check())) return response()->json(["response"=>"Veuillez vous identifier pour cette action !"]);
 
-        $categorie=Categorie::FindOrFail($categorie->id);
-        $catVerif=Categorie::where('id','<>',$categorie->id)
-          ->where('libelleCategorie',$request->libelleCategorie)->First();
+        $categorie=Categorie::Find($request->id);
+        $catVerif=Categorie::where('id','<>',$request->id)
+          ->where('libelleCategorie',$request->libelleCategorie)->first();
         if($catVerif){
-          return back()->with('error','Cette catégorie existe déjà');
+          return response()->json(["response"=>"Cette catégorie existe déjà"]);
         }
         $categorie->libelleCategorie=$request->libelleCategorie;
         $categorie->update();
-
-            return response()->json("Modification effectue avec succes");
+        return response()->json(["response"=>"Modification effectue avec succes"]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categorie $categorie)
+    public function destroy(Request $request)
     {
-        //
-        $categorie=Categorie::FindOrFail($categorie->id);
+        if (!(auth()->check())) return response()->json(["response"=>"Veuillez vous identifier pour cette action !"]);
+        $categorie=Categorie::find($request->id);
+        if(!$categorie) return response()->json(["response"=>"Cette categorie n'existe pas"]);
         $categorie->delete();
-        return response()->json("Suppression effectuee avec succes");
+        return response()->json(["response"=>"Suppression effectuee avec succes"]);
     }
 }

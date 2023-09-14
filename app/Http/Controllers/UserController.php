@@ -9,16 +9,18 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:api',['except' => ['store']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth:api',['except' => ['index']]);
+    // }
+    
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        
+        // return response()->json(['response'=>"coucou"]);
         $users = User::orderBy('id','DESC')->get();
         if($users->count()===0)
             return response()->json(['response'=>'La liste des Utilisateurs est vide !']);
@@ -56,6 +58,9 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        // if (!(auth()->check())){
+        //     return response()->json(["response"=>"Veuillez vous identifier pour cette action !"]);
+        // }
 
         if ( (!isset($request->pseudo) || empty($request->pseudo) ) || 
         (!isset($request->password) || empty($request->password)) ||
@@ -89,18 +94,29 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateUserRequest $request, string $id)
+    public function update(Request $request)
     {
         //
-        $user = User::findOrFail($request->id);
-        if(!$user) {
-            return response()->json(["message','Ce t'utilisateur n'existe pas !"]);
+        if($request->method() !== "PUT") return response()->json(["message"=>"Cette methode n'est pas autorisé pour cette action"]);
+
+         if (!(auth()->check())){
+            return response()->json(["response"=>"Veuillez vous identifier pour cette action !"]);
         }
-        dd($request);
-        $user = new User();
+            
+        $user = User::find($request->id);
+        if(!$user) {
+            return response()->json(["response","Ce t'utilisateur n'existe pas !"]);
+        }
+
+        if ( (!isset($request->pseudo) || empty($request->pseudo) ) || 
+        (!isset($request->password) || empty($request->password)) ||
+        (!isset($request->genre) || empty($request->genre)))
+        {
+            return response()->json(["response" => "Une erreur se trouve dans vos informations !" ]);
+        }
+
         $user->pseudo = $request->pseudo;
         $user->genre = strtoupper($request->genre);
-        $user->fonction = $request->fonction;
         if ($request->hasFile('avatar')) {
             $fileName = 'avatar'.time().$request->avatar->getClientOriginalExtension();
             $filePath = 'storage/photos/users/'.$fileName;
@@ -108,7 +124,7 @@ class UserController extends Controller
             $user->avatar = $filePath;
         }
 
-        $user->save();
+        $user->update();
         return response()->json(['response'=>"Modification effectue avec succes !"]);
 
     }
@@ -116,14 +132,17 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
         //
-        $user = User::findOrFail($id);
+        if($request->method() !== "DELETE") return response()->json(["response"=>"Cette methode n'est pas autorisé pour cette action"]);
+        if (!(auth()->check())) return response()->json(["response"=>"Veuillez vous identifier pour cette action !"]);
+            
+        $user = User::find($request->id);
         if(!$user)
-            return response()->json("Cet user n'existe pas dans la base");
+            return response()->json(["response"=>"Cet user n'existe pas dans la base"]);
 
         $user->delete();
-        return response()->json("Suppression effectuee avec succes");
+        return response()->json(["response"=>"Suppression effectuee avec succes"]);
     }
 }

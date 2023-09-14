@@ -27,8 +27,8 @@ Route::prefix('/categorie')->controller(CategorieController::class)->group(funct
     Route::get('/addCategorie','addCategorie')->name('addCategorie');
     Route::post('/storeCategorie','store')->name('storeCategorie');
     Route::get('/editCategorie/{categorie}','edit')->name('editCategorie');
-    Route::put('/updateCategorie/{categorie}','update')->name('updateCategorie');
-    Route::delete('/deleteCategorie/{categorie}','destroy')->name('destroyCategorie');
+    Route::put('/updateCategorie','update')->name('updateCategorie');
+    Route::delete('/deleteCategorie','destroy')->name('destroyCategorie');
 
 });
 
@@ -49,10 +49,10 @@ Route::prefix('/user')
         ->group(function(){
     Route::get('/listUser','index')->name('user.list');
     Route::get('/createUser','create')->name('user.create');
-    Route::post('/storeUser','store')->name('user.store');
+    Route::any('/storeUser','store')->name('user.store');
     Route::get('/editUser/{id}','edit')->name('user.edit');
-    Route::put('/updateUser/{id}','update')->name('user.update');
-    Route::delete('/deleteUser/{id}','destroy')->name('user.delete');
+    Route::any('/updateUser','update')->name('user.update');
+    Route::any('/deleteUser','destroy')->name('user.delete');
 });
 // Route pour les produits
 
@@ -62,8 +62,8 @@ Route::prefix('/produit')->controller(ProduitController::class)->group(function(
     Route::get('/addProduit','addProduit')->name('addProduit');
     Route::post('/storeProduit','store')->name('storeProduit');
     Route::get('/editProduit/{produit}','edit')->name('editProduit');
-    Route::put('/updateProduit/{produit}','update')->name('updateProduit');
-    Route::delete('/deleteProduit/{produit}','destroy')->name('destroyProduit');
+    Route::put('/updateProduit','update')->name('updateProduit');
+    Route::delete('/deleteProduit','destroy')->name('destroyProduit');
     }
 );
 
